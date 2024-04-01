@@ -10,8 +10,9 @@ Code Bits - All code in BeagleY_voice_backpack folder
 * test_microphone.py - Voice Recognition Test, does not engage the pumps
 * GUI_only.py - GUI Test, does not engage the pumps
 * stop.py - Stops all pumps in case where voice recognition glitches
-* combined_test.py - Actual Application Code - voice recognition + pumps
-
+* voiceOnly.py - Actual Application Code - voice recognition + pumps
+* GUIPumps.py - Actual Application Code - GUI + pumps
+* VoiceAndGUI.py - Actual APplication Code - Combines both
 
 # Accesories:
 
