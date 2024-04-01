@@ -2,13 +2,14 @@ FROM ghcr.io/staticrocket/ti-debian:bookworm-slim
 
 WORKDIR /app
 
-
 COPY requirements.txt .
 RUN apt-get update && apt-get install nano wget python3 python3-pip portaudio19-dev libasound2-dev alsa-utils i2c-tools python3-smbus -y
 
 RUN pip3 install -r requirements.txt -vvv --break-system-packages
 
 ENV PYTHONPATH="/usr/lib/python3/dist-packages/:/usr/local/lib/python3.11/site-packages"
+ENV DISPLAY=":0.0"
+
 
 COPY . .
 
