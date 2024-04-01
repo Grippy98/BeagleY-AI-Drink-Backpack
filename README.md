@@ -1,4 +1,6 @@
 # BeagleY-AI-Drink-Backpack
+
+``` git clone https://github.com/Grippy98/BeagleY-AI-Drink-Backpack ```
  
  Docker file exists but is behind times. Stock Beagle install or binary in this repo recommended. 
 
