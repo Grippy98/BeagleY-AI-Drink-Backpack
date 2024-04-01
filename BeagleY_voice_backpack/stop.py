@@ -164,7 +164,7 @@ class MotorDriver2():
         elif (motor == 3):
             pwm2.setDutycycle(self.PWMB_2, 0)
 
-print("this is a motor driver test code")
+print("Stopping all Pumps!")
 Motor = MotorDriver()
 Motor2 = MotorDriver2()
 
