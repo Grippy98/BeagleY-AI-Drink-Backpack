@@ -189,32 +189,32 @@ drink6 = tk.PhotoImage(file = r"drinks/drink6.png")
 
 def pourDrink1():
     Motor.MotorRun(0, 'forward', 100)
-    time.sleep(30)
+    time.sleep(5)
     Motor.MotorStop(0)
 
 def pourDrink2():
     Motor.MotorRun(1, 'forward', 100)
-    time.sleep(30)
+    time.sleep(5)
     Motor.MotorStop(1)
 
 def pourDrink3():
     Motor.MotorRun(2, 'forward', 100)
-    time.sleep(30)
+    time.sleep(5)
     Motor.MotorStop(2)
 
 def pourDrink4():
     Motor.MotorRun(3, 'forward', 100)
-    time.sleep(30)
+    time.sleep(5)
     Motor.MotorStop(3)
 
 def pourDrink5():
     Motor2.MotorRun(0, 'forward', 100)
-    time.sleep(30)
+    time.sleep(5)
     Motor2.MotorStop(0)
 
 def pourDrink6():
     Motor2.MotorRun(1, 'forward', 100)
-    time.sleep(30)
+    time.sleep(5)
     Motor2.MotorStop(1)
 
 b1 = tk.Button(root, text = 'Drink', image = drink1, command = pourDrink1) 
