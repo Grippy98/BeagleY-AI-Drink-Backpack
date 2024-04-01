@@ -11,12 +11,12 @@ root.title("Drink Backpack")
 topL = tk.Label(root, text = 'Available Ingredients', font =('Helvetica', 30)).pack(side = tk.TOP, pady = 10) 
 
 # Creating a photoimage object to use image 
-drink1 = tk.PhotoImage(file = r"/home/debian/BeagleY_voice_backpack/drinks/drink1.png")  
-drink2 = tk.PhotoImage(file = r"/home/debian/BeagleY_voice_backpack/drinks/drink2.png")  
-drink3 = tk.PhotoImage(file = r"/home/debian/BeagleY_voice_backpack/drinks/drink3.png")  
-drink4 = tk.PhotoImage(file = r"/home/debian/BeagleY_voice_backpack/drinks/drink4.png")  
-drink5 = tk.PhotoImage(file = r"/home/debian/BeagleY_voice_backpack/drinks/drink5.png")  
-drink6 = tk.PhotoImage(file = r"/home/debian/BeagleY_voice_backpack/drinks/drink6.png")  
+drink1 = tk.PhotoImage(file = r"$PWD/drinks/drink1.png")  
+drink2 = tk.PhotoImage(file = r"$PWD/drinks/drink2.png")  
+drink3 = tk.PhotoImage(file = r"$PWD/drinks/drink3.png")  
+drink4 = tk.PhotoImage(file = r"$PWD/drinks/drink4.png")  
+drink5 = tk.PhotoImage(file = r"$PWD/drinks/drink5.png")  
+drink6 = tk.PhotoImage(file = r"$PWD/drinks/drink6.png")  
 # here, image option is used
 # set image on button 
 
