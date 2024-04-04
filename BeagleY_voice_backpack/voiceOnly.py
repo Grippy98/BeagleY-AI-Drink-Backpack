@@ -222,7 +222,7 @@ try:
     else:
         dump_fn = None
 
-    with sd.RawInputStream(samplerate=args.samplerate, blocksize = 1000, device=args.device,
+    with sd.RawInputStream(samplerate=args.samplerate, blocksize = 200, device=args.device,
             dtype="int16", channels=1, callback=callback):
         print("#" * 80)
         print("Press Ctrl+C to stop the recording")
