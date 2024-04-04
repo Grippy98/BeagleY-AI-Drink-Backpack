@@ -121,41 +121,33 @@ class MotorDriver2():
         if(motor == 0):
             pwm2.setDutycycle(self.PWMA, speed)
             if(index == Dir[0]):
-                print ("1")
                 pwm2.setLevel(self.AIN1, 0)
                 pwm2.setLevel(self.AIN2, 1)
             else:
-                print ("2")
                 pwm2.setLevel(self.AIN1, 1)
                 pwm2.setLevel(self.AIN2, 0)
         if(motor == 1):
             pwm2.setDutycycle(self.PWMB, speed)
             if(index == Dir[0]):
-                print ("3")
                 pwm2.setLevel(self.BIN1, 0)
                 pwm2.setLevel(self.BIN1, 1)
             else:
-                print ("4")
                 pwm2.setLevel(self.BIN1_2, 1)
                 pwm2.setLevel(self.BIN2_2, 0)
         if(motor == 2):
             pwm2.setDutycycle(self.PWMA_2, speed)
             if(index == Dir[0]):
-                print ("5")
                 pwm2.setLevel(self.AIN1_2, 0)
                 pwm2.setLevel(self.AIN2_2, 1)
             else:
-                print ("6")
                 pwm2.setLevel(self.AIN1_2, 1)
                 pwm2.setLevel(self.AIN2_2, 0)
         if(motor == 3):
             pwm2.setDutycycle(self.PWMB_2, speed)
             if(index == Dir[0]):
-                print ("5")
                 pwm2.setLevel(self.BIN1_2, 0)
                 pwm2.setLevel(self.BIN2_2, 1)
             else:
-                print ("6")
                 pwm2.setLevel(self.BIN1_2, 1)
                 pwm2.setLevel(self.BIN2_2, 0)
         
