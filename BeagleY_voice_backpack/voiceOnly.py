@@ -165,7 +165,7 @@ class MotorDriver2():
 print("this is a motor driver test code")
 Motor = MotorDriver()
 Motor2 = MotorDriver2()
-sd.default.device = 1
+#sd.default.device = 1
 
 q = queue.Queue()
 
