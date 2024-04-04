@@ -249,7 +249,6 @@ try:
             data = q.get()
             if rec.AcceptWaveform(data):
                 textRead = json.loads(rec.Result())['text']
-                rec.setGrammar(acceptedWords)
                 print(textRead)
                 if("red" in textRead):
                     Motor.MotorRun(0, 'forward', 100)
