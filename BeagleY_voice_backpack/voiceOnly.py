@@ -4,6 +4,7 @@ from PCA9685 import PCA9685
 import time
 
 pumpDuration = 3
+purgeTime = 6
 
 import argparse
 import queue
@@ -263,19 +264,22 @@ try:
                     Motor2.MotorStop(1)
                 elif("prime" in textRead):
                     Motor.MotorRun(0, 'forward', 100)
-                    Motor.MotorRun(1, 'forward', 100)
-                    time.sleep(6)
+                    time.sleep(purgeTime)
                     Motor.MotorStop(0)
+                    Motor.MotorRun(1, 'forward', 100)
+                    time.sleep(purgeTime)
                     Motor.MotorStop(1)
                     Motor.MotorRun(2, 'backward', 100)
-                    Motor.MotorRun(3, 'backward', 100)
-                    time.sleep(6)
+                    time.sleep(purgeTime)
                     Motor.MotorStop(2)
+                    Motor.MotorRun(3, 'backward', 100)
+                    time.sleep(purgeTime)
                     Motor.MotorStop(3) 
                     Motor2.MotorRun(0, 'forward', 100)
-                    Motor2.MotorRun(1, 'forward', 100)
-                    time.sleep(6)    
+                    time.sleep(purgeTime)  
                     Motor2.MotorStop(0)
+                    Motor2.MotorRun(1, 'forward', 100)
+                    time.sleep(purgeTime)    
                     Motor2.MotorStop(1)
                 elif("stop" in textRead):
                     Motor.MotorStop(0)
