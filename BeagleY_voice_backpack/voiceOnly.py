@@ -281,6 +281,7 @@ try:
                     Motor2.MotorRun(1, 'forward', 100)
                     time.sleep(purgeTime)    
                     Motor2.MotorStop(1)
+                    print("\nDone Priming")
                 elif("stop" in textRead):
                     Motor.MotorStop(0)
                     Motor.MotorStop(1)
