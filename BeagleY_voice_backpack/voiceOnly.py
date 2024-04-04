@@ -302,8 +302,8 @@ try:
                 textRead = ""
             #else:
                 #print(rec.PartialResult())
-            #if dump_fn is not None:
-            #    dump_fn.write(data)
+            if dump_fn is not None:
+                dump_fn.write(data)
 
 except KeyboardInterrupt:
     print("\nDone")
