@@ -3,7 +3,7 @@
 from PCA9685 import PCA9685
 import time
 
-pumpDuration = 10
+pumpDuration = 3
 
 import argparse
 import queue
@@ -53,41 +53,33 @@ class MotorDriver():
         if(motor == 0):
             pwm.setDutycycle(self.PWMA, speed)
             if(index == Dir[0]):
-                print ("1")
                 pwm.setLevel(self.AIN1, 0)
                 pwm.setLevel(self.AIN2, 1)
             else:
-                print ("2")
                 pwm.setLevel(self.AIN1, 1)
                 pwm.setLevel(self.AIN2, 0)
         if(motor == 1):
             pwm.setDutycycle(self.PWMB, speed)
             if(index == Dir[0]):
-                print ("3")
                 pwm.setLevel(self.BIN1, 0)
                 pwm.setLevel(self.BIN1, 1)
             else:
-                print ("4")
                 pwm.setLevel(self.BIN1_2, 1)
                 pwm.setLevel(self.BIN2_2, 0)
         if(motor == 2):
             pwm.setDutycycle(self.PWMA_2, speed)
             if(index == Dir[0]):
-                print ("5")
                 pwm.setLevel(self.AIN1_2, 0)
                 pwm.setLevel(self.AIN2_2, 1)
             else:
-                print ("6")
                 pwm.setLevel(self.AIN1_2, 1)
                 pwm.setLevel(self.AIN2_2, 0)
         if(motor == 3):
             pwm.setDutycycle(self.PWMB_2, speed)
             if(index == Dir[0]):
-                print ("5")
                 pwm.setLevel(self.BIN1_2, 0)
                 pwm.setLevel(self.BIN2_2, 1)
             else:
-                print ("6")
                 pwm.setLevel(self.BIN1_2, 1)
                 pwm.setLevel(self.BIN2_2, 0)
         
