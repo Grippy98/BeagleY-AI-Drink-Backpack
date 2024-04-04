@@ -3,6 +3,8 @@
 from PCA9685 import PCA9685
 import time
 
+pumpDuration = 10
+
 import argparse
 import queue
 import sys
@@ -247,34 +249,34 @@ try:
             data = q.get()
             if rec.AcceptWaveform(data):
                 textRead = json.loads(rec.Result())['text']
-                #rec.setGrammar(acceptedWords)
+                rec.setGrammar(acceptedWords)
                 print(textRead)
                 if("red" in textRead):
                     Motor.MotorRun(0, 'forward', 100)
-                    time.sleep(30)
+                    time.sleep(pumpDuration)
                     Motor.MotorStop(0)
                     #print("backward 2 s")
                     #Motor.MotorRun(0, 'backward', 100)
                     #Motor.MotorRun(1, 'backward', 100) 
                 elif("blue" in textRead):
                     Motor.MotorRun(1, 'forward', 100)
-                    time.sleep(60)
+                    time.sleep(pumpDuration)
                     Motor.MotorStop(1)
                 elif("green" in textRead): #MOTOR .MOTOR2 BACKWARDS
                     Motor.MotorRun(2, 'backward', 100)
-                    time.sleep(30)
+                    time.sleep(pumpDuration)
                     Motor.MotorStop(2)
                 elif("purple" in textRead):
                     Motor.MotorRun(3, 'backward', 100) #MOTOR.Motor3 BACKWARDS
-                    time.sleep(30)
+                    time.sleep(pumpDuration)
                     Motor.MotorStop(3)
                 elif("yellow" in textRead):
                     Motor2.MotorRun(0, 'forward', 100)
-                    time.sleep(30)
+                    time.sleep(pumpDuration)
                     Motor2.MotorStop(0)
                 elif("orange" in textRead):
                     Motor2.MotorRun(1, 'forward', 100)
-                    time.sleep(30)
+                    time.sleep(pumpDuration)
                     Motor2.MotorStop(1)
                 elif("prime" in textRead):
                     Motor.MotorRun(0, 'forward', 100)
