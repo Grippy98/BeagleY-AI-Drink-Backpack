@@ -12,7 +12,7 @@ import json
 
 from vosk import Model, KaldiRecognizer
 
-acceptedWords = '["stop", "tasty beverage", "prime", "one", "two", "three", "four", "five", "six", "[unk]"]'
+acceptedWords = '["stop", "prime", "red", "green", "blue", "orange", "purple", "yellow", "[unk]"]'
 
 
 Dir = [
@@ -179,6 +179,7 @@ class MotorDriver2():
 print("this is a motor driver test code")
 Motor = MotorDriver()
 Motor2 = MotorDriver2()
+sd.default.device = 1
 
 q = queue.Queue()
 
@@ -248,30 +249,30 @@ try:
                 textRead = json.loads(rec.Result())['text']
                 #rec.setGrammar(acceptedWords)
                 print(textRead)
-                if("one" in textRead):
+                if("red" in textRead):
                     Motor.MotorRun(0, 'forward', 100)
                     time.sleep(30)
                     Motor.MotorStop(0)
                     #print("backward 2 s")
                     #Motor.MotorRun(0, 'backward', 100)
                     #Motor.MotorRun(1, 'backward', 100) 
-                elif("two" in textRead):
+                elif("blue" in textRead):
                     Motor.MotorRun(1, 'forward', 100)
                     time.sleep(60)
                     Motor.MotorStop(1)
-                elif("three" in textRead): #MOTOR .MOTOR2 BACKWARDS
+                elif("green" in textRead): #MOTOR .MOTOR2 BACKWARDS
                     Motor.MotorRun(2, 'backward', 100)
                     time.sleep(30)
                     Motor.MotorStop(2)
-                elif("four" in textRead):
+                elif("purple" in textRead):
                     Motor.MotorRun(3, 'backward', 100) #MOTOR.Motor3 BACKWARDS
                     time.sleep(30)
                     Motor.MotorStop(3)
-                elif("five" in textRead):
+                elif("yellow" in textRead):
                     Motor2.MotorRun(0, 'forward', 100)
                     time.sleep(30)
                     Motor2.MotorStop(0)
-                elif("six" in textRead):
+                elif("orange" in textRead):
                     Motor2.MotorRun(1, 'forward', 100)
                     time.sleep(30)
                     Motor2.MotorStop(1)
@@ -296,18 +297,6 @@ try:
                     Motor.MotorStop(1)
                     Motor.MotorStop(2)
                     Motor.MotorStop(3)
-                    Motor2.MotorStop(0)
-                    Motor2.MotorStop(1)
-
-                elif("tasty beverage" in textRead):
-                    Motor.MotorRun(2, 'backward', 100)
-                    Motor.MotorRun(3, 'backward', 100)
-                    time.sleep(15)
-                    Motor.MotorStop(2)
-                    Motor.MotorStop(3) 
-                    Motor2.MotorRun(0, 'forward', 100)
-                    Motor2.MotorRun(1, 'forward', 100)
-                    time.sleep(15)    
                     Motor2.MotorStop(0)
                     Motor2.MotorStop(1)
                 textRead = ""
